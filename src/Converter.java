@@ -9,15 +9,15 @@ public class Converter {
         Scanner scanner = new Scanner(System.in);
         while (true) {
             try {
-                System.out.println("Type your dog age");
+                System.out.println("Type your Dog's age");
                 int age = scanner.nextInt();
                 if (age < 0) {
-                    throw new IllegalArgumentException("Negative number's not allowed");
+                    throw new IllegalArgumentException("Negative numbers are not allowed");
                 }
                 this.setDogAge(age);
                 break;
             } catch (InputMismatchException e) {
-                System.out.println("Invalid input make sure you enter a valid input");
+                System.out.println("Invalid input. Make sure you enter a valid integer.");
                 scanner.nextLine();
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
@@ -33,8 +33,8 @@ public class Converter {
     }
 
     public void printAge() {
-        System.out.println("Dogs Age: " + this.getDogAge());
-        System.out.println("Dogs Age Converted To Human: " + this.getHumanAge());
+        System.out.println("Dog's Age: " + this.getDogAge());
+        System.out.println("Dog's Age Converted To Human: " + this.getHumanAge());
     }
 
     public int getDogAge() {
