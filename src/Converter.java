@@ -1,6 +1,11 @@
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+@Getter
+@Setter
 public class Converter {
     private int dogAge;
     private int humanAge;
@@ -35,21 +40,5 @@ public class Converter {
     public void printAge() {
         System.out.println("Dog's Age: " + this.getDogAge());
         System.out.println("Dog's Age Converted To Human: " + this.getHumanAge());
-    }
-
-    public int getDogAge() {
-        return dogAge;
-    }
-
-    public void setDogAge(int dogAge) {
-        this.dogAge = dogAge;
-    }
-
-    public int getHumanAge() {
-        return humanAge;
-    }
-
-    public void setHumanAge(int humanAge) {
-        this.humanAge = humanAge;
     }
 }
